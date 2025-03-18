@@ -95,7 +95,7 @@ hands = mp_hands.Hands(
 
 
 def gesturemodelmatch(image):
-    image = cv.flip(image, 1)
+#    image = cv.flip(image, 1)
     debug_image = copy.deepcopy(image)
 
     gesture_id = -1
