@@ -1,0 +1,31 @@
+{
+  "id": "1742308908363",
+  "camera": "camera_phong_khach",
+  "timestamp": 1742308908,
+  "gesture": "Right",
+  "hand_rect": {
+    "x": 861,
+    "y": 182,
+    "width": 135,
+    "height": 92,
+    "area": 12420,
+    "confidence": 0.983336865901947
+  },
+  "double_take": {
+    "id": "1d0d49ec-c5c9-45d3-9b5a-0928422c562a",
+    "duration": 0.26,
+    "timestamp": "2025-03-18T14:41:48.628Z",
+    "attempts": 1,
+    "camera": "camera_phong_khach",
+    "zones": [],
+    "counts": {
+      "person": 0,
+      "match": 0,
+      "miss": 0,
+      "unknown": 0
+    },
+    "matches": [],
+    "misses": [],
+    "unknowns": []
+  }
+}
