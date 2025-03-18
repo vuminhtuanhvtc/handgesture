@@ -1,0 +1,34 @@
+<!-- templates/logs.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandGesture - System Logs</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>System Logs</h1>
+        
+        <div class="menu">
+            <a href="/" class="menu-item">Dashboard</a>
+            <a href="/config" class="menu-item">Configuration</a>
+            <a href="/images" class="menu-item">Stored Images</a>
+            <a href="/logs" class="menu-item">System Logs</a>
+        </div>
+        
+        <div class="controls">
+            <button id="refresh-logs" class="refresh-btn">Refresh Logs</button>
+            <button id="auto-refresh" class="refresh-btn">Auto Refresh: OFF</button>
+            <button id="clear-logs" class="clear-btn">Clear View</button>
+        </div>
+        
+        <div class="log-container">
+            <pre id="log-content"></pre>
+        </div>
+    </div>
+    
+    <script src="/static/logs.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!-- templates/config.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HandGesture Configuration</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Configuration Editor</h1>
+        <a href="/" class="back-link">← Back to Dashboard</a>
+        
+        <form id="config-form">
+            <textarea id="config-editor" name="config" rows="25" cols="80">{{ config }}</textarea>
+            <div class="button-group">
+                <button type="submit" id="save-button">Save and Restart</button>
+            </div>
+        </form>
+        
+        <div id="message" class="hidden"></div>
+    </div>
+    
+    <script src="/static/config.js"></script>
+</body>
+</html>

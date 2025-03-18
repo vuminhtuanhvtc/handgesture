@@ -1,0 +1,39 @@
+# MQTT broker connection details
+mqtt:
+  host: 192.168.1.202    # MQTT broker address
+  port: 1883         # MQTT broker port
+  user: test-mqtt    # Optional: Username for MQTT authentication
+  password: abc # Optional: Password for MQTT authentication
+
+# Frigate video NVR connection details
+frigate:
+  host: 192.168.1.11    # Frigate server address
+  port: 5000         # Frigate API port
+#  cameras:           # Optional: List of cameras to monitor (if omitted, all Frigate cameras will be used)
+#    - camera1
+#    - camera2
+
+# Optional: Double-Take face recognition connection details
+# Comment out this entire section if you don't want to use face recognition
+double-take:
+   host: 192.168.1.11   # Double-Take server address
+   port: 3000        # Double-Take API port
+   detect_all_results: true  # When false, only process when faces match; when true, process all people (default: false)
+#   cameras:          # Optional: List of cameras that should use face recognition
+#     - camera1       # If omitted, all cameras will use face recognition
+
+# Optional: Gesture detection parameters
+# Comment out this entire section to use defaults
+# gesture:
+#   handsize: 9000     # Minimum hand size in pixels for detection (default: 9000)
+#   confidence: 0.75   # Confidence threshold for gesture classification (default: 0.75)
+#   topic: gestures    # MQTT topic prefix for publishing results (default: gestures)
+#   allowed_persons: []  # List of person names to process. Empty list means process all people (default: [])
+
+# Optional: Storage configuration for saving processed images
+# Comment out this entire section to use defaults
+# storage:
+#   enabled: true      # Set to false to disable image storage completely (default: true)
+#   path: storage      # Directory where images will be stored (default: storage)
+#   retention_days: 1  # Number of days to keep images, set to 0 for permanent storage (default: 1)
+#   save_annotated: true  # Save images with gesture annotations (default: true)

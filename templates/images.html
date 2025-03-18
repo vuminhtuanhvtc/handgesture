@@ -1,0 +1,35 @@
+<!-- templates/images.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HandGesture Stored Images</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stored Images</h1>
+        <a href="/" class="back-link">← Back to Dashboard</a>
+        
+        <div class="image-gallery">
+            {% for image in images %}
+            <div class="image-card">
+                <img src="/storage/{{ image.path }}" alt="Gesture Detection" class="gallery-image">
+                <div class="image-details">
+                    <p>Time: {{ image.timestamp|datetime }}</p>
+                    {% if image.metadata %}
+                    <p>Camera: {{ image.metadata.camera }}</p>
+                    <p>Gesture: {{ image.metadata.gesture }}</p>
+                    <button class="show-json-btn" data-image="{{ image.path }}">Show JSON Data</button>
+                    {% endif %}
+                </div>
+                <div class="json-data hidden" id="json-{{ image.path|replace('.', '-') }}">
+                    <pre>{{ image.metadata|tojson(indent=2) }}</pre>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <script src="/static/images.js"></script>
+</body>
+</html>
